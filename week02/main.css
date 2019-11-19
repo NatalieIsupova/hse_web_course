@@ -1,0 +1,5 @@
+th { background-color: #ff0000; }
+td { background-color: #00ff00; }
+.hello {background-color: #0000ff}
+table, th, td {border: 1px solid red; }
+table {border-collapse: collapse;}
