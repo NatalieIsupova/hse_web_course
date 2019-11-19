@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hello</title>
+	<style>
+		.red {background-color: red;}
+		.blue {background-color: blue;}
+	</style>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<!-- при нажатии (событие) вызывается функция - меняется текст элемента -->
+	<script>
+		$(function() {
+			var isBlue = {};
+			$("div > h1").click(function() {
+				var $current = $(this);
+				if (isBlue[$current]) {
+					$current
+					$(this).removeClass("blue");
+					$(this).addClass("red");
+					isBlue[$current] = false;
+				} else {
+					$current
+					$(this).removeClass("red");
+					$(this).addClass("blue")
+					isBlue[$current] = true;
+				}
+			// $("div.class2 h1").click(function() {
+				// $(this).text("Test"); 
+				// alert($(this).text())
+				//$("div.class2").html("<h1>!!!</h1>");
+				// $(this).toggleClass("red");
+			});
+		}
+		);
+	</script>
+</head>
+<body>
+	<div class="class1">
+		<h1>Hello, world!</h1>
+	</div>
+	<div class="class2">
+		<h1>Wow!</h1>
+	</div>
+</body>
+</html>
